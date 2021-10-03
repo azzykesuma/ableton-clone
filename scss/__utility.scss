@@ -112,4 +112,50 @@
     flex-direction: column;
     margin-block: 2em;
     background-color: $light_blue;
+
+    > img {
+        width : 100%;
+    }
+
+    > p,a {
+        padding : 20px;
+    }
+
+    a {
+        color : $blue;
+        font-weight: 700;
+    }
+}
+
+.gridContainer {
+    display: grid;
+
+    .grid__item {
+        margin-bottom: 1em
+    }
+}
+
+form {
+    margin-top: 1em;
+    position: relative;
+
+    input {
+        width : 100%;
+        padding : 7px 10px;
+        background-color: $gray;
+        border: none;
+    }
+
+    button {
+        position: absolute;
+        right : 0;
+        padding : 7px 15px;
+        background-color: $blue;
+        color : white;
+        border : none;
+    }
+}
+
+.one > p:first-child {
+    font-weight: 700;
 }

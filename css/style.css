@@ -139,6 +139,47 @@
   margin-block: 2em;
   background-color: #d5b3ff;
 }
+.imageWrapLast > img {
+  width: 100%;
+}
+.imageWrapLast > p, .imageWrapLast a {
+  padding: 20px;
+}
+.imageWrapLast a {
+  color: #0000ff;
+  font-weight: 700;
+}
+
+.gridContainer {
+  display: -ms-grid;
+  display: grid;
+}
+.gridContainer .grid__item {
+  margin-bottom: 1em;
+}
+
+form {
+  margin-top: 1em;
+  position: relative;
+}
+form input {
+  width: 100%;
+  padding: 7px 10px;
+  background-color: #D1FFF2;
+  border: none;
+}
+form button {
+  position: absolute;
+  right: 0;
+  padding: 7px 15px;
+  background-color: #0000ff;
+  color: white;
+  border: none;
+}
+
+.one > p:first-child {
+  font-weight: 700;
+}
 
 * {
   margin: 0;
@@ -261,4 +302,14 @@ main .imageHero p {
 .midImg {
   margin-block: 2em;
   width: 100%;
+}
+
+footer {
+  border-top: 3px solid #D1FFF2;
+  padding: 2em 20px 20px 20px;
+}
+footer .footerHeader {
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 1em;
 }

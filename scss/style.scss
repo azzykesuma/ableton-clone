@@ -116,4 +116,15 @@ main {
     width: 100%;   
 }
 
+footer {
+    border-top: 3px solid $gray;
+    padding : 2em 20px 20px 20px;
+
+    .footerHeader {
+        font-size: 40px;
+        font-weight: 700;
+        margin-bottom: 1em;
+    }
+}
+
 
