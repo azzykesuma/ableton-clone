@@ -1,0 +1,115 @@
+.mainSection {
+    padding : 20px;
+}
+
+.profile {
+    line-height: 1.7;
+    font-weight: 700;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.imageWrap {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    margin-block: 3em;
+
+    img {
+        width : 40vw;
+        max-width: 100%;
+        position: relative;
+        z-index: 1;
+        margin-left: 8vw;
+    }
+
+    .imageBackground {
+        width: 60%;
+        max-width: 1000px;
+        background-color: $light_green;
+        position: absolute;
+        right: 0;
+        margin-right: -20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        > img {
+            width : clamp(150px, 100% , 500px);
+            padding : 10%;
+        }
+    }
+}
+
+.caption {
+    font-size: 12px;
+    margin-block : 0.3em 2em;
+}
+
+.imageWrapMid {
+    display: flex;
+    align-items: center;
+    min-height: 40vh;
+    margin-left: -20px;
+    margin-block: 3em;
+
+    .midBackground {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        background-color: $green;
+        max-width: 60%;
+        // height : 10em;
+
+        > img {
+            padding : 2em;
+            margin-left: -2em;
+            width: 100%;
+        }
+    }
+
+    img {
+        width : 100%;
+        margin-left: -1em;
+    }
+}
+
+.imageWrapBottom {
+    margin-block: 3em;
+    display: flex;
+    justify-content: center;
+
+    .imageBackgroundBottom {
+        background-color: $light_blue;
+        display: flex;
+        max-width: 80%;
+        align-items: center;
+        position: relative;
+        min-height: 40vh;
+
+        > img:first-child {
+            width : 100%;
+            max-width: 50%;
+            padding : 1em;
+            margin-left: -3em;
+        }
+
+        > img:nth-child(2) {
+            width : 100%;
+            min-width: 10em;
+            padding : 1em;
+            margin-right: -5em;
+            position: absolute;
+            right: 0;
+        }
+    }
+}
+
+.imageWrapLast {
+    display: flex;
+    flex-direction: column;
+    margin-block: 2em;
+    background-color: $light_blue;
+}
