@@ -1,0 +1,1 @@
+const menuNav = document.getElementById('menuNav');

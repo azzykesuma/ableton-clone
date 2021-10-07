@@ -47,6 +47,51 @@
     margin-block : 0.3em 2em;
 }
 
+.mobileNav {
+    background-color: $blue;
+    margin-inline : calc(-15%);
+    padding : 20px;
+
+    li {
+        color : white;
+        margin-bottom: 1em;
+    }
+
+    .login {
+        font-size: .7em;
+        margin-bottom: 2em;
+    }
+
+    .more {
+        font-size: 1.3em;
+    }
+
+    .footerNav {
+        margin-top: 2em;
+        overflow: auto;
+        width : 100%;
+
+        > p {
+            color : white;
+            font-size: 1.5em;
+        }
+    }
+
+    .flexContainer {
+        min-width: 150%;
+        margin-top: 2em;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-evenly;
+        gap : 1em;
+
+
+        li {
+            font-size: .8em;
+        }
+    }
+}
+
 .imageWrapMid {
     display: flex;
     align-items: center;
@@ -77,27 +122,28 @@
 }
 
 .imageWrapBottom {
-    margin-block: 3em;
     display: flex;
     justify-content: center;
+    padding-block : 10%;
 
     .imageBackgroundBottom {
         background-color: $light_blue;
         display: flex;
-        max-width: 80%;
+        justify-content: flex-start;
+        max-width: 100%;
         align-items: center;
         position: relative;
         min-height: 40vh;
 
         > img:first-child {
-            width : 100%;
+            width : clamp(10em , 100% , 20em);
             max-width: 50%;
             padding : 1em;
-            margin-left: -3em;
+            margin-left: -10%;
         }
 
         > img:nth-child(2) {
-            width : 100%;
+            width : clamp(10em , 100% , 40em);
             min-width: 10em;
             padding : 1em;
             margin-right: -5em;
@@ -136,26 +182,57 @@
 }
 
 form {
-    margin-top: 1em;
+    margin-block: 1em;
     position: relative;
 
     input {
         width : 100%;
-        padding : 7px 10px;
+        padding : 15px 10px;
         background-color: $gray;
         border: none;
+        font-size: .9em;
     }
 
     button {
         position: absolute;
         right : 0;
-        padding : 7px 15px;
+        padding : 15px 20px;
         background-color: $blue;
         color : white;
         border : none;
     }
+
+    @include mQ(62.5em) {
+        margin-block : 0;
+    } 
 }
 
 .one > p:first-child {
     font-weight: 700;
+}
+
+.optionsWrapper {
+    display: flex;
+    flex-shrink: 1;
+    gap : 5px;
+    margin-bottom: 1em;
+
+    select {
+        padding : 5px 10px;
+        border: none;
+        background-color: $gray;
+
+        option {
+            font-weight: 700;
+        }
+    }
+}
+
+.footerLogoWrap {
+    display: flex;
+    align-items: center;
+
+    img {
+        width : 5em;
+    }
 }
