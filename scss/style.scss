@@ -17,7 +17,7 @@ body {
 
 a {
     text-decoration: none;
-    color : black
+    // color : black
 }
 
 ul,li {
@@ -43,6 +43,7 @@ main {
             display: flex;
             align-items: center;
             gap : .3em;
+            color : black;
 
             > span {
                 margin-top: 5px;
@@ -53,6 +54,45 @@ main {
                 }
             }
 
+        }
+
+        .desktopNav {
+            display: none;
+
+            @include mQ(62.5em) {
+                display: flex;
+                justify-content: space-between;
+                width : 100%;
+    
+                ul {
+                    display: flex;
+                    align-items: center;
+                    gap : 1em;
+    
+                    &:first-child {
+                        margin-left: 1em;
+                    }
+    
+                }
+    
+                li {
+                    cursor: pointer;
+                }
+    
+                .try {
+                    color : $blue;
+                    font-weight: 700;
+                }
+    
+                button {
+                    border : none;
+                    background: none;
+                    font-family: 'Nunito',sans-serif;
+                    font-weight: 700;
+                    font-size: 1.3em;
+                    cursor: pointer;
+                }
+            }
         }
     }
 

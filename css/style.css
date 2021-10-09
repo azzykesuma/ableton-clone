@@ -55,11 +55,14 @@
 }
 
 .mobileNav {
+  display: none;
   background-color: #0000ff;
   margin-inline: calc(-15%);
   padding: 20px;
+  -webkit-animation: fadein 0.5s ease-in-out;
+          animation: fadein 0.5s ease-in-out;
 }
-.mobileNav li {
+.mobileNav li > a {
   color: white;
   margin-bottom: 1em;
 }
@@ -95,6 +98,31 @@
 }
 .mobileNav .flexContainer li {
   font-size: 0.8em;
+}
+
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes fadein {
+  0% {
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+.active {
+  display: block;
 }
 
 .imageWrapMid {
@@ -278,7 +306,6 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 ul, li {
@@ -312,6 +339,7 @@ main header a {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.3em;
+  color: black;
 }
 main header a > span {
   margin-top: 5px;
@@ -319,6 +347,47 @@ main header a > span {
 main header a > span > ion-icon {
   font-size: 1em;
   color: black;
+}
+main header .desktopNav {
+  display: none;
+}
+@media screen and (min-width: 62.5em) {
+  main header .desktopNav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  main header .desktopNav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
+  }
+  main header .desktopNav ul:first-child {
+    margin-left: 1em;
+  }
+  main header .desktopNav li {
+    cursor: pointer;
+  }
+  main header .desktopNav .try {
+    color: #0000ff;
+    font-weight: 700;
+  }
+  main header .desktopNav button {
+    border: none;
+    background: none;
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 1.3em;
+    cursor: pointer;
+  }
 }
 main .secondNav {
   padding: 20px;

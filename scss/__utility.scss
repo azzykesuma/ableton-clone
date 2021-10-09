@@ -48,13 +48,18 @@
 }
 
 .mobileNav {
+    display: none;
     background-color: $blue;
     margin-inline : calc(-15%);
     padding : 20px;
+    animation: fadein 0.5s ease-in-out;
 
     li {
-        color : white;
-        margin-bottom: 1em;
+
+        > a {
+            color : white;
+            margin-bottom: 1em;
+        }
     }
 
     .login {
@@ -90,6 +95,18 @@
             font-size: .8em;
         }
     }
+}
+
+@keyframes fadein {
+    0% {
+        transform : translateY(-1000px)
+    } 100% {
+        transform : translateY(0)
+    }
+}
+
+.active {
+    display: block;
 }
 
 .imageWrapMid {

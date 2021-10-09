@@ -1,0 +1,19 @@
+.bottomNav {
+    padding : 20px;
+    overflow : scroll;
+    min-width : 375px;
+    margin-inline : -10%;
+    background-color: red;
+
+    ul {
+        min-width: 100%;
+        display: flex;
+        gap : 1em;
+    }
+
+    li {
+        font-size: .8em;
+        cursor: pointer;
+        font-weight: 700;
+    }
+}
