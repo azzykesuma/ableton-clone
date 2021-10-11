@@ -24,9 +24,16 @@
 }
 
 .topSection {
+    text-align: left;
+
+    @include mQ(63.75em) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
     > h1 {
-        font-size: 3em;
+        font-size: 6vw;
         font-family: 'Open Sans';
     }
 
@@ -35,6 +42,7 @@
         align-items: center;
         gap : 20px;
         margin-top: 1em;
+
     }
 
     ion-icon {
@@ -47,9 +55,10 @@
 }
 
 .bottomSection {
-    margin-top: 2em;
+    margin-block: 2em 4em;
     margin-inline : -20%;
     background-color: #fbfa61;
+    padding-bottom: 2em;
 
     img {
         width : 100%;
@@ -75,7 +84,7 @@
     }
 
     .gridWrapper {
-        margin-top: 1em;
+        margin-block: 1em;
         display: grid;
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr;
@@ -84,10 +93,28 @@
         @include mQ(44.37em) {
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
+            margin-inline : 10%;
         }
 
         .grid_item {
             min-height: 8em;
+            position: relative;
+
+            .textWrap {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #899592;
+                text-align: center;
+                height : 100%;
+                opacity: 0.8;
+                padding : 20px;
+
+                > a {
+                    color : white;
+                    font-weight: bold;
+                }
+            }
         }
 
         .one,
@@ -102,6 +129,7 @@
 
         .one {
             background-image: url('./assets/poster-comping.webp');
+
 
         }
 
@@ -126,3 +154,74 @@
         }
     }
 }
+
+.information {
+    margin-inline: -20%;
+
+    h3 {
+        margin-inline: 10%;
+        font-size: 2.5em;
+
+        @include mQ(63.75em) {
+            text-align: center;
+            font-size: 6vw;
+        }
+    }
+
+    .caption_second_hero {
+        margin-left: 5.5%;
+        font-size: 0.8em;
+        font-weight: 900;
+
+        @include mQ(63.75em) {
+            margin-left: 0;
+        }
+    }
+
+    .secondHeroImg {
+        background-image: url('./assets/poster-comping.webp');
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 50vh;
+        height : 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2em;
+
+
+        ion-icon {
+            font-size: 2em;
+            background-color: $blue;
+            color : white;
+            padding : 10px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+    }
+
+
+    .heroDesc {
+        margin-top: 2em;
+        margin-inline : 10%;
+
+        div {
+            margin-bottom: 2em;
+        }
+
+        h4 {
+            font-size: 1.3em;
+            margin-bottom: 1em;
+            font-family: 'Open Sans';
+        }
+
+         p {
+            margin-inline : unset;
+        }
+    }
+
+    @include mQ(63.75em) {
+        margin-inline : -5%;
+    }
+}
+

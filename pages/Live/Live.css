@@ -19,8 +19,25 @@
   font-weight: 700;
 }
 
+.topSection {
+  text-align: left;
+}
+@media screen and (min-width: 63.75em) {
+  .topSection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 .topSection > h1 {
-  font-size: 3em;
+  font-size: 6vw;
   font-family: "Open Sans";
 }
 .topSection h2 {
@@ -42,9 +59,10 @@
 }
 
 .bottomSection {
-  margin-top: 2em;
+  margin-block: 2em 4em;
   margin-inline: -20%;
   background-color: #fbfa61;
+  padding-bottom: 2em;
 }
 .bottomSection img {
   width: 100%;
@@ -65,7 +83,7 @@
   margin-top: 3em;
 }
 .bottomSection .gridWrapper {
-  margin-top: 1em;
+  margin-block: 1em;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr 2px 1fr 2px 1fr;
@@ -104,6 +122,7 @@
     grid-template-rows: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
+    margin-inline: 10%;
   }
   .bottomSection .gridWrapper > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -132,6 +151,27 @@
 }
 .bottomSection .gridWrapper .grid_item {
   min-height: 8em;
+  position: relative;
+}
+.bottomSection .gridWrapper .grid_item .textWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #899592;
+  text-align: center;
+  height: 100%;
+  opacity: 0.8;
+  padding: 20px;
+}
+.bottomSection .gridWrapper .grid_item .textWrap > a {
+  color: white;
+  font-weight: bold;
 }
 .bottomSection .gridWrapper .one,
 .bottomSection .gridWrapper .two,
@@ -159,4 +199,73 @@
 }
 .bottomSection .gridWrapper .six {
   background-image: url("./assets/screenshot-expressive-sounds.webp");
+}
+
+.information {
+  margin-inline: -20%;
+}
+.information h3 {
+  margin-inline: 10%;
+  font-size: 2.5em;
+}
+@media screen and (min-width: 63.75em) {
+  .information h3 {
+    text-align: center;
+    font-size: 6vw;
+  }
+}
+.information .caption_second_hero {
+  margin-left: 5.5%;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+@media screen and (min-width: 63.75em) {
+  .information .caption_second_hero {
+    margin-left: 0;
+  }
+}
+.information .secondHeroImg {
+  background-image: url("./assets/poster-comping.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+.information .secondHeroImg ion-icon {
+  font-size: 2em;
+  background-color: #0000ff;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.information .heroDesc {
+  margin-top: 2em;
+  margin-inline: 10%;
+}
+.information .heroDesc div {
+  margin-bottom: 2em;
+}
+.information .heroDesc h4 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+}
+.information .heroDesc p {
+  margin-inline: unset;
+}
+@media screen and (min-width: 63.75em) {
+  .information {
+    margin-inline: -5%;
+  }
 }
