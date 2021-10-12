@@ -214,16 +214,6 @@
     font-size: 6vw;
   }
 }
-.information .caption_second_hero {
-  margin-left: 5.5%;
-  font-size: 0.8em;
-  font-weight: 900;
-}
-@media screen and (min-width: 63.75em) {
-  .information .caption_second_hero {
-    margin-left: 0;
-  }
-}
 .information .secondHeroImg {
   background-image: url("./assets/poster-comping.webp");
   background-repeat: no-repeat;
@@ -249,23 +239,268 @@
   border-radius: 50%;
   cursor: pointer;
 }
-.information .heroDesc {
-  margin-top: 2em;
-  margin-inline: 10%;
-}
-.information .heroDesc div {
-  margin-bottom: 2em;
-}
-.information .heroDesc h4 {
-  font-size: 1.3em;
-  margin-bottom: 1em;
-  font-family: "Open Sans";
-}
-.information .heroDesc p {
-  margin-inline: unset;
-}
 @media screen and (min-width: 63.75em) {
   .information {
     margin-inline: -5%;
   }
+}
+
+.heroDesc {
+  margin-top: 2em;
+  margin-inline: 10%;
+}
+.heroDesc div {
+  margin-bottom: 2em;
+}
+.heroDesc h4 {
+  font-size: 1.3em;
+  margin-bottom: 1em;
+  font-family: "Open Sans";
+}
+@media screen and (min-width: 63.75em) {
+  .heroDesc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-inline: 0;
+    gap: 20px;
+  }
+}
+
+.caption_second_hero {
+  margin-left: 5.5%;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+@media screen and (min-width: 63.75em) {
+  .caption_second_hero {
+    margin-left: 0;
+  }
+}
+
+.informationBottom {
+  margin-inline: -20%;
+  margin-top: 10em;
+  position: relative;
+}
+.informationBottom h3 {
+  margin-inline: 10%;
+  font-size: 2.5em;
+}
+@media screen and (min-width: 63.75em) {
+  .informationBottom h3 {
+    margin-inline: 0;
+    font-size: 8vw;
+  }
+}
+.informationBottom .thirdHeroImg {
+  background-image: url("./assets/poster-mpe.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 50vh;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 2em;
+}
+.informationBottom .thirdHeroImg ion-icon {
+  font-size: 2em;
+  background-color: #0000ff;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+@media screen and (min-width: 63.75em) {
+  .informationBottom {
+    margin-inline: -5%;
+  }
+}
+.informationBottom button {
+  color: #0000ff;
+  padding: 15px;
+  background-color: white;
+  border: 2px solid #0000ff;
+  cursor: pointer;
+  font-weight: 900;
+  margin-block: 5em;
+  width: 80%;
+  margin-inline: 10%;
+}
+@media screen and (min-width: 63.75em) {
+  .informationBottom button {
+    margin-inline: 0;
+    width: 100%;
+  }
+}
+
+.experiment {
+  background-color: #c4fef9;
+  margin-inline: -20%;
+  margin-top: 10em;
+  padding: 14%;
+}
+.experiment .experimentInfo {
+  margin-bottom: 2em;
+}
+.experiment .experimentInfo .wrapperImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2em;
+}
+.experiment .experimentInfo .wrapperImg img {
+  width: 80%;
+}
+.experiment .experimentInfo ion-icon {
+  color: white;
+  background-color: #0000ff;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+.experiment .experimentInfo .lastWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+}
+.experiment .experimentInfo .lastWrap a {
+  font-weight: 900;
+}
+.experiment .experimentInfo .newDevices {
+  background-image: url("./assets/poster-new-devices.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 20vh;
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.experiment .experimentInfo .newDevices > ion-icon {
+  border-radius: 50%;
+}
+.experiment h3 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .experiment h3 {
+    font-size: 8vw;
+  }
+}
+.experiment h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 63.75em) {
+  .experiment h4 {
+    font-size: 4vw;
+  }
+}
+.experiment p {
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+@media screen and (min-width: 63.75em) {
+  .experiment p {
+    width: 50%;
+  }
+}
+
+.doMore {
+  margin-inline: -20%;
+  margin-top: 3em;
+  padding: 14%;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+.doMore .sectionItem .flex_item {
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem .flex_item {
+    width: 50%;
+  }
+  .doMore .sectionItem .flex_item:nth-of-type(2) {
+    width: 30%;
+  }
+}
+.doMore .sectionItem .mainImg {
+  background-image: url("./assets/poster-performance.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 70vh;
+  margin-inline: -20%;
+}
+.doMore .sectionItem .caption_third_hero {
+  margin-left: -5%;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+.doMore .sectionItem ion-icon {
+  color: white;
+  background-color: #0000ff;
+  padding: 20px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 5em;
+}
+.doMore p {
+  line-height: 1.5em;
+}
+.doMore h3 {
+  font-size: 2.5em;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore h3 {
+    font-size: 8vw;
+  }
+}
+.doMore h4 {
+  font-size: 1.5em;
+  margin-bottom: 2em;
 }
