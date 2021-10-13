@@ -404,6 +404,7 @@
             justify-content: center;
             min-height: 70vh;
             margin-inline: -20%;
+
         }
 
         .caption_third_hero {
@@ -421,10 +422,92 @@
             border-radius: 50%;
             font-size: 5em;
         }
-    }
 
+        &:nth-of-type(2) {
+
+            @include mQ(63.75em) {
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+            }
+
+            .flex_item {
+                margin-bottom: 2em;
+    
+                @include mQ(63.75em) {
+                    width : 60%;
+    
+                    &:nth-of-type(2) {
+                        width : 30%
+                    }
+                }
+    
+            }
+        }
+
+        &:nth-of-type(3) {
+
+            @include mQ(63.75em) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .flex_item {
+                margin-bottom: 2em;
+    
+                @include mQ(63.75em) {
+                    width : 50%;
+    
+                    &:nth-of-type(2) {
+                        width : 30%
+                    }
+                }
+    
+            }
+        }
+        .macroImg {
+            background-image: url('./assets/screenshot-rack-improvements.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 130vh;
+            width :100%;
+            margin-bottom: 4em;
+
+            @include mQ(63.75em) {
+                margin-right: -20%;
+                width :unset;
+                background-size: contain;
+                min-height: 80vh;
+            }
+        }
+
+        .chanceTools {
+            background-image: url('./assets/screenshot-chance-tools.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            min-height: 80vh;
+            min-width :100%;
+            margin-bottom: 4em;
+            margin-inline :-20%;
+        }
+
+        .followActions {
+            background-image: url('./assets/screenshot-follow-actions.webp');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            min-height: 80vh;
+            min-width :100%;
+            margin-bottom: 4em;
+            margin-inline :-20%;
+        }
+    }
+    
     p {
         line-height: 1.5em;
+        margin-bottom: 2em;
     }
 
     h3 {
@@ -439,6 +522,82 @@
     h4 {
         font-size: 1.5em;
         margin-bottom: 2em;
+    }
+}
+
+.instrument {
+    margin-top: 2em;
+    background-color: #fadee8;
+    padding : 14%;
+    margin-inline : -20%;
+
+    h3 {
+        font-size: 3rem;
+        margin-bottom: 2em;
+
+        @include mQ(63.75em) {
+            font-size: 5rem;
+        }
+    }
+
+    h4 {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        @include mQ(63.75em) {
+            font-size: 3rem;
+        }
+    }
+
+    .headerParagraph {
+        max-width: 50ch;
+        margin-bottom: 2em;
+    }
+
+    .instrumentWrap {
+        display: flex;
+        gap : 2em;
+
+        .instrumentItem {
+            width : 33.333%;
+
+            .piano,
+            .brass,
+            .string {
+                min-height: 35vh;
+                background-size: cover;
+                background-repeat: no-repeat;
+                width : 100%;
+                position: relative;
+                margin-bottom: 1em;
+
+                ion-icon {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    font-size: 1.5em;
+                    background-color: $blue;
+                    padding : 10px;
+                    color : white;
+                    cursor: pointer;
+                }
+            }
+
+            .piano {
+                background-image: url('./assets/upright-piano.webp');
+            }
+
+            .brass {
+                background-image: url('./assets/brass-quartet.webp');
+            }
+
+            .string {
+                background-image: url('./assets/string-quartet.webp');
+            }
+
+            p {
+                line-height: 1.5em;
+            }
+        }
     }
 }
 

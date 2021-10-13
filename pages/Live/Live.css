@@ -488,8 +488,95 @@
   border-radius: 50%;
   font-size: 5em;
 }
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem:nth-of-type(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.doMore .sectionItem:nth-of-type(2) .flex_item {
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem:nth-of-type(2) .flex_item {
+    width: 60%;
+  }
+  .doMore .sectionItem:nth-of-type(2) .flex_item:nth-of-type(2) {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem:nth-of-type(3) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+.doMore .sectionItem:nth-of-type(3) .flex_item {
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem:nth-of-type(3) .flex_item {
+    width: 50%;
+  }
+  .doMore .sectionItem:nth-of-type(3) .flex_item:nth-of-type(2) {
+    width: 30%;
+  }
+}
+.doMore .sectionItem .macroImg {
+  background-image: url("./assets/screenshot-rack-improvements.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 130vh;
+  width: 100%;
+  margin-bottom: 4em;
+}
+@media screen and (min-width: 63.75em) {
+  .doMore .sectionItem .macroImg {
+    margin-right: -20%;
+    width: unset;
+    background-size: contain;
+    min-height: 80vh;
+  }
+}
+.doMore .sectionItem .chanceTools {
+  background-image: url("./assets/screenshot-chance-tools.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 80vh;
+  min-width: 100%;
+  margin-bottom: 4em;
+  margin-inline: -20%;
+}
+.doMore .sectionItem .followActions {
+  background-image: url("./assets/screenshot-follow-actions.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 80vh;
+  min-width: 100%;
+  margin-bottom: 4em;
+  margin-inline: -20%;
+}
 .doMore p {
   line-height: 1.5em;
+  margin-bottom: 2em;
 }
 .doMore h3 {
   font-size: 2.5em;
@@ -503,4 +590,76 @@
 .doMore h4 {
   font-size: 1.5em;
   margin-bottom: 2em;
+}
+
+.instrument {
+  margin-top: 2em;
+  background-color: #fadee8;
+  padding: 14%;
+  margin-inline: -20%;
+}
+.instrument h3 {
+  font-size: 3rem;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .instrument h3 {
+    font-size: 5rem;
+  }
+}
+.instrument h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 63.75em) {
+  .instrument h4 {
+    font-size: 3rem;
+  }
+}
+.instrument .headerParagraph {
+  max-width: 50ch;
+  margin-bottom: 2em;
+}
+.instrument .instrumentWrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2em;
+}
+.instrument .instrumentWrap .instrumentItem {
+  width: 33.333%;
+}
+.instrument .instrumentWrap .instrumentItem .piano,
+.instrument .instrumentWrap .instrumentItem .brass,
+.instrument .instrumentWrap .instrumentItem .string {
+  min-height: 35vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+  margin-bottom: 1em;
+}
+.instrument .instrumentWrap .instrumentItem .piano ion-icon,
+.instrument .instrumentWrap .instrumentItem .brass ion-icon,
+.instrument .instrumentWrap .instrumentItem .string ion-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-size: 1.5em;
+  background-color: #0000ff;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+.instrument .instrumentWrap .instrumentItem .piano {
+  background-image: url("./assets/upright-piano.webp");
+}
+.instrument .instrumentWrap .instrumentItem .brass {
+  background-image: url("./assets/brass-quartet.webp");
+}
+.instrument .instrumentWrap .instrumentItem .string {
+  background-image: url("./assets/string-quartet.webp");
+}
+.instrument .instrumentWrap .instrumentItem p {
+  line-height: 1.5em;
 }
