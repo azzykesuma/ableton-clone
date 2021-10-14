@@ -284,6 +284,56 @@
             width : 100%;
         }
     }
+
+
+    .learnMore {
+        display: none;
+        padding-inline : 10%;
+
+
+        @include mQ(63.75em) {
+
+        }
+
+        .item {
+            width : 100%;
+            margin-bottom: 2em;
+            @include mQ(63.65em) {
+                width : 50%;
+            }
+        }
+
+        .imageProd,
+        .imageProdTwo {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 50vh;
+            margin-bottom: 1em;
+        }
+
+        .imageProd {
+            background-image: url('./assets/screenshot-note-expression-view.webp');
+        }
+
+        .imageProdTwo {
+            background-image: url('./assets/screenshot-expressive-sounds.webp');
+        }
+
+        h4 {
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+    }
+    .active {
+        display: block;
+
+        @include mQ(63.75em) {
+            display: flex;
+            gap : 3em;
+            padding-inline : 0;
+        }
+    }
 }
 
 .experiment {
@@ -527,6 +577,7 @@
 
 .instrument {
     margin-top: 2em;
+    margin-bottom: 2em;
     background-color: #fadee8;
     padding : 14%;
     margin-inline : -20%;
@@ -555,20 +606,37 @@
 
     .instrumentWrap {
         display: flex;
-        gap : 2em;
+        flex-direction: column;
+        margin-bottom: 2em;
+
+        @include mQ(43.75em) {
+            flex-direction: row;
+            gap : 2em;
+        }
 
         .instrumentItem {
-            width : 33.333%;
+
+           
+            @include mQ(43.75em) {
+                width : 33.333%;
+            }
 
             .piano,
             .brass,
-            .string {
+            .string,
+            .voice,
+            .mood,
+            .drone {
                 min-height: 35vh;
                 background-size: cover;
                 background-repeat: no-repeat;
-                width : 100%;
+                width : 50%;
                 position: relative;
                 margin-bottom: 1em;
+
+                @include mQ(43.75em) {
+                    width : 100%;
+                }
 
                 ion-icon {
                     position: absolute;
@@ -594,9 +662,72 @@
                 background-image: url('./assets/string-quartet.webp');
             }
 
+            .voice {
+                background-image: url('./assets/voice-box.webp');
+            }
+
+            .mood {
+                background-image: url('./assets/mood-reel.webp');
+            }
+
+            .drone {
+                background-image: url('./assets/drone-lab.webp');
+            }
+
             p {
                 line-height: 1.5em;
             }
+        }
+    }
+}
+
+.liveFeature {
+    font-weight: 900;
+}
+
+.tryLive {
+    margin-top: 3em;
+    background-color : #fbfa61;
+    margin-inline : -20%;
+    
+
+    @include mQ(63.75em) {
+        display: flex;
+    }
+
+    .leftPart {
+        padding : 8rem;
+        width : 50%;
+    }
+
+    h3 {
+        font-size: 2rem;
+        margin-bottom: 2em;
+
+        @include mQ(63.75em) {
+            font-size: 3rem;
+        }
+    }
+
+    p,a {
+        font-weight: 900;
+        font-size: 1.5em;
+    }
+
+    p {
+        margin-bottom: 1em;
+    }
+
+    .creationSpace {
+
+        display: none;
+        @include mQ(63.75em) {   
+            display: block;         
+            background-image: url('./assets/creation-space-top-down-5.webp');
+            width: 50%;
+            height : auto;
+            background-size: cover;
+            background-repeat: no-repeat;
         }
     }
 }

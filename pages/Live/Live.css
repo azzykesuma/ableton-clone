@@ -340,6 +340,49 @@
     width: 100%;
   }
 }
+.informationBottom .learnMore {
+  display: none;
+  padding-inline: 10%;
+}
+.informationBottom .learnMore .item {
+  width: 100%;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.65em) {
+  .informationBottom .learnMore .item {
+    width: 50%;
+  }
+}
+.informationBottom .learnMore .imageProd,
+.informationBottom .learnMore .imageProdTwo {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 50vh;
+  margin-bottom: 1em;
+}
+.informationBottom .learnMore .imageProd {
+  background-image: url("./assets/screenshot-note-expression-view.webp");
+}
+.informationBottom .learnMore .imageProdTwo {
+  background-image: url("./assets/screenshot-expressive-sounds.webp");
+}
+.informationBottom .learnMore h4 {
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+.informationBottom .active {
+  display: block;
+}
+@media screen and (min-width: 63.75em) {
+  .informationBottom .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 3em;
+    padding-inline: 0;
+  }
+}
 
 .experiment {
   background-color: #c4fef9;
@@ -594,6 +637,7 @@
 
 .instrument {
   margin-top: 2em;
+  margin-bottom: 2em;
   background-color: #fadee8;
   padding: 14%;
   margin-inline: -20%;
@@ -624,24 +668,55 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 2em;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2em;
 }
-.instrument .instrumentWrap .instrumentItem {
-  width: 33.333%;
+@media screen and (min-width: 43.75em) {
+  .instrument .instrumentWrap {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 2em;
+  }
+}
+@media screen and (min-width: 43.75em) {
+  .instrument .instrumentWrap .instrumentItem {
+    width: 33.333%;
+  }
 }
 .instrument .instrumentWrap .instrumentItem .piano,
 .instrument .instrumentWrap .instrumentItem .brass,
-.instrument .instrumentWrap .instrumentItem .string {
+.instrument .instrumentWrap .instrumentItem .string,
+.instrument .instrumentWrap .instrumentItem .voice,
+.instrument .instrumentWrap .instrumentItem .mood,
+.instrument .instrumentWrap .instrumentItem .drone {
   min-height: 35vh;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
+  width: 50%;
   position: relative;
   margin-bottom: 1em;
 }
+@media screen and (min-width: 43.75em) {
+  .instrument .instrumentWrap .instrumentItem .piano,
+.instrument .instrumentWrap .instrumentItem .brass,
+.instrument .instrumentWrap .instrumentItem .string,
+.instrument .instrumentWrap .instrumentItem .voice,
+.instrument .instrumentWrap .instrumentItem .mood,
+.instrument .instrumentWrap .instrumentItem .drone {
+    width: 100%;
+  }
+}
 .instrument .instrumentWrap .instrumentItem .piano ion-icon,
 .instrument .instrumentWrap .instrumentItem .brass ion-icon,
-.instrument .instrumentWrap .instrumentItem .string ion-icon {
+.instrument .instrumentWrap .instrumentItem .string ion-icon,
+.instrument .instrumentWrap .instrumentItem .voice ion-icon,
+.instrument .instrumentWrap .instrumentItem .mood ion-icon,
+.instrument .instrumentWrap .instrumentItem .drone ion-icon {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -660,6 +735,65 @@
 .instrument .instrumentWrap .instrumentItem .string {
   background-image: url("./assets/string-quartet.webp");
 }
+.instrument .instrumentWrap .instrumentItem .voice {
+  background-image: url("./assets/voice-box.webp");
+}
+.instrument .instrumentWrap .instrumentItem .mood {
+  background-image: url("./assets/mood-reel.webp");
+}
+.instrument .instrumentWrap .instrumentItem .drone {
+  background-image: url("./assets/drone-lab.webp");
+}
 .instrument .instrumentWrap .instrumentItem p {
   line-height: 1.5em;
+}
+
+.liveFeature {
+  font-weight: 900;
+}
+
+.tryLive {
+  margin-top: 3em;
+  background-color: #fbfa61;
+  margin-inline: -20%;
+}
+@media screen and (min-width: 63.75em) {
+  .tryLive {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+.tryLive .leftPart {
+  padding: 8rem;
+  width: 50%;
+}
+.tryLive h3 {
+  font-size: 2rem;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 63.75em) {
+  .tryLive h3 {
+    font-size: 3rem;
+  }
+}
+.tryLive p, .tryLive a {
+  font-weight: 900;
+  font-size: 1.5em;
+}
+.tryLive p {
+  margin-bottom: 1em;
+}
+.tryLive .creationSpace {
+  display: none;
+}
+@media screen and (min-width: 63.75em) {
+  .tryLive .creationSpace {
+    display: block;
+    background-image: url("./assets/creation-space-top-down-5.webp");
+    width: 50%;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
